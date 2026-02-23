@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!--icon-->
+        <title>Virtual Health Tracker</title>
+    </head>
+    <body>
+
+        <div id="Information" class="main-card0"> <!-- div za nekoj licni informaciite vnesuvanje na samio pocetok -->
+            <form id="Measurments_form1"> 
+                <div style="color:#ffffff">Enter youre informations</div>
+                <input placeholder="Name" id="Name" type="text">
+                <input placeholder="City" id="City" type="text">
+                <select placeholder="Gender" id="Gender">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+                <button type="submit" id="Submit1">Enter</button>
+            </form>
+        </div>
+        
+        <div id="blured"> <!-- osnoven div na koj se grade stranicata -->
+
+            <div class="container1"> <!-- conteiner za prvio red -->
+
+                <div id="place_for_info" class="main-card1"     
+                    style="background: linear-gradient(135deg, #000a16 0%, #16213e 30%, #533483 60%, #aa4063 100%);">  <!-- div za prvata kocka -->
+                    <p id="info_place" class="Hello">Hello, Martina </p>
+                    <img id="img" src="./materials/female.png" style="width: 100px;">
+                    <p id="welcome" class="Hello" style="text-decoration: underline;">Welcome</p>
+                </div>
+
+                <div id="Measurments" class="main-card1"> <!-- div za vtorata kocka -->
+                    <h1 id="M" class="Hello2"></h1>
+                    <form id="Measurments_form">
+                        <input placeholder="Steps (>0)" id="Steps" type="number" > 
+                        <input placeholder="Calories (>1)" id="Calories" type="number">  
+                        <input placeholder="Sleep (0-24h)" id="Sleep" type="number"> 
+                        <input placeholder="Pulse (40-200bpm)" id="Pulse" type="number"> 
+                        <hr style="margin: 5px;">
+                        <input placeholder="Height (45-250cm)" id="Height" type="number">
+                        <input placeholder="Weight (2-500kg)" id="Weight" type="number">
+                        <button type="submit" id="Submit2">Enter</button>
+                    </form>
+                </div>
+
+               <div id="BMI" class="main-card1"> <!-- div za tretatat kocka -->
+                    <div class="bmi-container">
+                        <div class="dotted-ring"></div>
+                        <div class="circle">
+                            <span id="bmi_value" class="bmi-value" style="font-size: 30px;">77</span>
+                            <span class="bmi-label">BMI</span>
+                        </div>
+                    </div>
+                    <p class="today-label">TODAY</p>
+                </div>
+
+            </div> <!-- zavrsuva divo za prvio red -->
+
+            <div id="chart" class="container2"> <!-- conteiner za vtorio red -->
+                    <div class="main-card2"> <canvas id="myChart" style="width:100%"></canvas> </div>
+                    <div class="main-card2"> <canvas id="myChart1" style="width:100%"></canvas> </div>
+                    <div class="main-card2"> <canvas id="myChart2" style="width:100%"></canvas> </div>
+                    <div class="main-card2"> <canvas id="myChart3" style="width:100%"></canvas> </div>
+                    <div class="main-card2"> <canvas id="myChart4" style="width:100%"></canvas> </div>
+            </div>
+
+            <div class="container3"> <!-- conteiner za tretio red -->
+
+                <div id="Measurments_here" class="main-card3" > <!-- div za prvata kocka -->
+                    <div class="text_for_measurments"> <!-- div za teksto nad tabelite -->
+                        Below is youre daily measurments and preview
+                        <button id="right" class="button" title="Click to see the week after"><i class="fa-solid fa-angle-right"></i></button>
+                        <button id="left" class="button" title="Click to see the week before"><i class="fa-solid fa-angle-left"></i></button> 
+                    </div>
+                    <div class="progress-container"> <!-- div za tabelite podreduvanje -->
+                      <div class="div_na_table1">
+                        <table class="table1">
+                            <tr class="tr1">    
+                                <td class="td1">Steps</td>
+                                <td id="Steps_v" class="td1" style=" text-align: center;">24</td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="td1">Calories</td>
+                                <td id="Calories_v" class="td1" style=" text-align: center;">1007778</td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="td1">Sleep</td>
+                                <td id="Sleep_v" class="td1" style=" text-align: center;">1001010101</td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="td1">Pulse</td>
+                                <td id="Pulse_v" class="td1" style=" text-align: center;">110</td>
+                            </tr>
+                        </table>
+                      </div>
+                      <div class="div_na_table1" id='animate'>
+                        <table class="table1">
+                            <tr class="tr1">
+                                <td class="td1">Steps</td>
+                                <td id="Steps_vn" class="td1" style=" text-align: center;">24</td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="td1">Calories</td>
+                                <td id="Calories_vn" class="td1" style=" text-align: center;">1007778</td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="td1">Sleep</td>
+                                <td id="Sleep_vn" class="td1" style=" text-align: center;">1001010101</td>
+                            </tr>
+                            <tr class="tr1">
+                                <td class="td1">Pulse</td>
+                                <td id="Pulse_vn" class="td1" style=" text-align: center;">110</td>
+                            </tr>
+                            
+                        </table>
+                      </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: space-around;"> <!-- div za teksto pod tabelite -->
+                         <div class="today">Today</div>
+                         <div  id="Preview" >Preview</div>
+                    </div>
+                </div>
+
+                <div id="API" class="main-card4" style="display: flex; flex-direction: row; justify-content: space-between;
+                        background: linear-gradient(135deg, #aa4063 0%,  #533483 30%, #16213e 60%, #000a16 100%);"> <!-- div za vtorata kocka -->
+                        <div style="width: 110px; height: 265px; text-align: left;">
+                            <span id="activity_lvl" class="n1">Today<br>your<br>activity<br>level<br>is normal</span>
+                        </div>
+                        <div style="width: 270px; height: 260px; ">
+                            <span>
+                                <table style="border: none; width: 100%; font-size: 20px; ">
+                                    <tr>
+                                        <td id="city" rowspan="3" style="text-emphasis: open; color: #5b7ff7;">London:</td>
+                                        <td id="weather" class="icon1" style="color: #5b7ff7;">
+                                            <i class="fas fa-sun"></i>
+                                            <i class="fa-solid fa-cloud"></i>
+                                            <i class="fas fa-cloud-rain"></i>
+                                            <i class="fas fa-snowflake"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icon2"><i id="temperature" class="fa-solid fa-temperature-full">21.21</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icon3"><i id="wind" class="fa-solid fa-wind">13.24</i></td>
+                                    </tr>
+
+                                </table>
+                            </span>
+                            <span id="recomendation">You weren't very active today, but the weather is harsh. Try light indoor activity or a short walk if needed. </span>
+                        </div>
+                </div>
+
+                <div id="Import/Export" class="main-card4"> <!-- div za tretatat kocka -->
+                    
+                    <div class="importTxt">
+                        <i class="fa-regular fa-hand-point-down"></i>
+                        Load your measurements
+                        <input type="file" name="file" id="file" style="width: 95%;">
+                    </div>
+
+                    <div class="export">
+                            <button id="export" style="height: 25px; width: 70px;">Export</button>
+                    </div>
+                    <div class="exportTxt">
+                            <i class="fa-regular fa-hand-point-up" ></i>
+                            Export your measurements
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <script type="module" src="scripts/main.js"></script>
+        <script type="module" src="scripts/chart.js"></script>
+    </body>
+</html>

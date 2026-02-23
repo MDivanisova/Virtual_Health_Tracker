@@ -1,0 +1,411 @@
+#Measurments_form1{ /* za formata ureduvanje */ 
+  gap: 2px;
+  font-size: 25px;
+}
+
+.main-card0 { /* za 3 te pod-divovite vo prvi red */
+  background-color: #010116;
+  width: 400px;
+  margin: 7px;
+  padding: 6px;
+  text-align: center;  
+  font-size: 30px;
+}
+
+#Information{ /* za imeto i gender form skrien */
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top:40%;
+  left:39%;  
+  z-index: 10; 
+}
+
+#blured{  /* da se zamagle pozadinata na samio pocetok */
+  filter: blur(30px);
+}
+
+
+
+
+
+
+body { /* gradient na boi na body i uredvanje */
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(ellipse at 20% 20%, #35234b 0%, transparent 70%),
+    radial-gradient(ellipse at 60% 20%, #2975bf 0%, transparent 70%),
+    radial-gradient(ellipse at 100% 20%, #3d54b1 0%, transparent 70%),
+    radial-gradient(ellipse at 100% 100%, #a12141 0%, transparent 70%),
+    radial-gradient(ellipse at 20% 100%, #362d6f 0%, transparent 70%);
+  background-blend-mode:screen;
+}
+
+.Hello{ /* za bukvite na welcome i ureduvanje */
+  font-family: 'Bungee Inline', cursive;
+  font-weight: bold; 
+  text-decoration-style: solid;
+  font-size: 30px;
+  line-height: 1em;
+  color: #ffffff;
+  margin: 10px
+}
+
+.Hello1{ /* za bukvite na measurments ureduvanje */
+  font-family: 'Bungee Inline', cursive;
+  font-weight: bold; 
+  text-decoration-style: solid;
+  font-size: 20px;
+  line-height: 1em;
+  color: #ffffff;
+  margin: 10px
+}
+
+.container1 { /* glaven container na 1 red */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main-card1 { /* za pod-divovite u nego 3 prvi*/
+    background-color: #010116;
+    opacity: 70%;
+    width: 400px;
+    margin: 7px;
+    padding: 6px;
+    text-align: center;  
+    font-size: 30px;
+
+}
+
+.Hello2{ /* za bukvite nad measurments */
+  font-size: 17px;
+  color: #ffffff;
+}
+
+input::placeholder { /* pocrni bukvi na placeholder */
+    color: rgb(0, 0, 0);
+}
+input{
+    border: 0;
+}
+ #Measurments_form{ /* za formata ureduvanje */ 
+    gap: 2px;
+    font-size: 25px;
+}
+
+input, select { /* ureduvanje na input */
+  display: inline-block;
+  border: 2px solid rgb(77, 4, 55);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 3px;
+}
+#Submit1{ /* za submit1 kopceto */
+  border-radius: 8px;
+  font-size: 15px;
+}
+#Submit2{ /* za submit2 kopceto */
+  border-radius: 8px;
+  font-size: 15px;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+#BMI { /* nadvoresnio container za bmi */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bmi-container { /* vnatresen za krugovite */
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+div.dotted-ring { /* nadvoresen krug */
+    border-color: blue;
+    border-style: dotted  dotted none  none;
+    width: 150px;
+    height: 150px;
+    border-radius: 90%;
+    border-width: 7px;
+    border-top-color: rgb(48, 116, 133);
+    border-right-color: rgb(77, 4, 55);
+
+} 
+
+.circle { /* vnatresen krug */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #1a1a2e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bmi-value { /* brojkata u bmi */
+    font-size: 50px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.bmi-label { /* teksto unatre u bmi */
+    font-size: 13px;
+    font-weight: bold;
+    color: #aa4063;
+    margin-top: 3px;
+    letter-spacing: 3px;
+}
+
+.today-label { /* labelata today */
+    background:
+        radial-gradient(ellipse at 20% 20%, #160130 0%, transparent 70%),
+        radial-gradient(ellipse at 60% 20%, #2975bf 0%, transparent 70%),
+        radial-gradient(ellipse at 100% 20%, #2e789b 0%, transparent 70%),
+        radial-gradient(ellipse at 100% 100%, #521021 0%, transparent 70%);
+    color: #ffffff;
+    padding: 10px 35px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin: 0;
+    display: inline-block;
+}
+
+
+
+
+
+
+.container2 { /* glaven container na 2red */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow-x: scroll;
+}
+
+.main-card2 { /* za pod-divovite u nego 3 prvi */
+    background-color: #010116;
+    opacity: 60%;
+    min-width: 700px;
+    max-width: 1000px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+    text-align: center;  
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+.container3 { /* glaven container na 3 red */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main-card3 { /* za pod-divovite u nego 3 prvi*/
+    background-color: #010116;
+    opacity: 70%;
+    width: 700px;
+    margin: 7px;
+    padding: 6px; 
+    font-size: 30px;
+    height: 270px;
+}
+
+.progress-container{ /* div za dvete tabeli za measurments*/
+     display: flex;
+    flex-direction: row; 
+    color:#010116;
+}
+
+.table1 { /* za prvata tabela ureduvanje */
+  margin-top: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 22px;
+  background-color: #e2e4f3;
+  border-radius: 15px;
+}
+
+.td1 { /* za td na tabele1 */
+  padding: 8px;
+}
+
+.tr1:nth-child(even){background-color: #5b7ff7;} /* za redicite u tabelite da imat preku eden razlicna boja */
+
+.tr1:hover {background-color: #aa4063;} /* za hover */
+
+
+.button { /* za dete button za levo i desno */
+  background: #5b7ff7;
+  border: 1px solid rgba(78, 205, 196, 0.6);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 17px;
+  width: 45px; 
+  height: 40px;
+  box-shadow: 3px 7px;
+}
+button:hover { /* hover na buttons */
+   background: #aa4063;
+    border: 1px solid rgba(78, 205, 196, 0.6);
+    box-shadow: 
+        0 12px 40px rgba(78, 205, 196, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+.text_for_measurments{ /* za tekstot nad tabelite */
+  font-family: Times New Roman, Times, serif; 
+  color: #ffffff; 
+  margin-bottom: 5px; 
+  margin-left: 60px; 
+  font-size: 25px; 
+  margin-top: 5px;
+}
+
+.div_na_table1{ 
+  background-color: #ffffff; 
+  width: 400px; 
+  height: 180px; 
+  margin-right: 40px; 
+  margin-left: 40px; 
+  margin-top: 2px;  
+  margin-bottom: 2px;
+}
+
+.today{ /* today tekst */
+  font-family: Times New Roman, Times, serif; 
+  color: #ffffff; 
+  font-size: 25px;
+}
+
+#Preview{ /* preview tekst */
+  font-family: Times New Roman, Times, serif; 
+  color: #ffffff; 
+  font-size: 25px;
+}
+
+.main-card4 { /* za pod-divovite u poslednio vtorite 2 */
+    background-color: #010116;
+    opacity: 70%;
+    width: 400px;
+    margin: 7px;
+    padding: 6px;
+    text-align: center;  
+    font-size: 30px;
+    height: 270px;
+}
+span.n1 { /* za today youre activ.... tekstot ureduvanje */
+  border: 5px solid #5b7ff7;
+  padding:  0em 1em;
+  border-radius: 16px;
+  font-size: 20px;
+  line-height: 2;
+  -webkit-box-decoration-break: slice;
+  box-decoration-break: slice;
+  color: #ffffff;
+
+}
+.fa-sun { /* za icon boja  */
+  color: #5b7ff7;
+}
+.fa-cloud{ /* za icon boja  */
+  color: #5b7ff7;
+}
+.fa-cloud-rain{ /* za icon boja  */
+  color: #5b7ff7;
+}
+.fa-snowflake{ /* za icon boja  */
+  color: #5b7ff7;
+}
+.fa-temperature-full{ /* za icon boja  */
+ color: #5b7ff7;
+}
+.fa-wind{ /* za icon boja  */
+ color: #5b7ff7;
+}
+
+
+#recomendation{ /* ureduvanje na citatot */
+  font-family: 'Bungee Inline', cursive;
+  font-weight: bold; 
+  text-decoration-style: solid;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-right: 15px;
+
+  color: #ffffff; 
+  display: inline-block; 
+  line-height: 2; 
+  height: 160px;
+}
+
+
+div{ /* ureduvanje na div */
+  border-radius: 15px;
+}
+
+.export{ /* ureduvanje na kopceto za eksport */
+  width: 93%; text-align: left; 
+  display: flex; height: 25px; 
+  margin-top: 10%; 
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 10px; 
+  padding: 4px;
+  border: 2px solid rgb(77, 4, 55) 
+}
+.exportTxt{ /* ureduvanje na tekstot za export */
+  font-family: Times New Roman, Times, serif; 
+  color: #ffffff; 
+  margin-left: 9%; 
+  margin-top: 2%; 
+  margin-bottom: 10%; 
+  text-align: left; 
+}
+.importTxt{ /* ureduvanje na tekstot za import */
+  font-family: Times New Roman, Times, serif; 
+  color: #ffffff; 
+  margin-top: 10%; 
+  margin-bottom: 2%;
+}
